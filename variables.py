@@ -8,5 +8,13 @@ if d > e:
 elif e > d:
     result = "Running and strength training had a greater improvement on running time."
 else:
-    result = "Both training regimes had the same improvement on running time."
+    result = "They are same."
 print(result)
+
+
+X=True
+Y=False
+W=X!=Y
+print("X:", X)
+print("Y:", Y)
+print("W:", W)

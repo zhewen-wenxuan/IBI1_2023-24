@@ -1,9 +1,9 @@
 import matplotlib.pyplot as plt
-Dic={'Sleeping':8,'Classes':6,'Studying':3.5,'TV':2,'Music':1,'Other':3.5}
-Sp= [0, 0, 0.1, 0, 0, 0,]
-a=Dic.keys()
-b=Dic.values()
+Dic={'Sleeping':8,'Classes':6,'Studying':3.5,'TV':2,'Music':1,'Other':3.5} #Compile data into a dictionary
+Sp= [0, 0, 0.1, 0, 0, 0,] #emphasis one activity
+a=Dic.keys() #a is the keys of Dic
+b=Dic.values() #b is values of Dic
 plt.figure()
 plt.pie(b, labels =a, startangle = 90, explode =Sp)
 plt.show()
-plt.clf() 
+plt.clf() #Clear Previous Image

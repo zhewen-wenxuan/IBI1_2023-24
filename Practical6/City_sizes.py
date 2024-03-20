@@ -1,13 +1,13 @@
-uk_cities=[0.56,0.62,0.04,9.7]
+uk_cities=[0.56,0.62,0.04,9.7] #list the population and city name
 ch_cities=[0.58,8.4,29.9,22.2]
 uk_cityname=["Edinburgh","Glasgow","Stirling","London"]
 china_cityname=["Haining","Hangzhou","Shanghai","Beijing"]
-import matplotlib.pyplot as plt
-width = 0.5
+import matplotlib.pyplot as plt 
+width = 0.5 #leave proper space
 plt.figure()
 plt.bar(uk_cityname,uk_cities, width)
 plt.ylabel("Population")
-plt.title("Population of UK cities")
+plt.title("Population of UK cities") #set a proper title
 plt.show()
 
 

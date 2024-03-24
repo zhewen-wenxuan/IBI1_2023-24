@@ -1,4 +1,4 @@
-a = 4
+a = 4 #input the first a number
 # we need 5 numbers, so range to 6
 for i in range(1,6):
 # we don't need add i=i+1

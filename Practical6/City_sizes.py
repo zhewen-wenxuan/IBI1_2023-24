@@ -4,6 +4,7 @@ uk_cityname=["Edinburgh","Glasgow","Stirling","London"]
 china_cityname=["Haining","Hangzhou","Shanghai","Beijing"]
 import matplotlib.pyplot as plt 
 width = 0.5 #leave proper space
+print(uk_cities,ch_cities)
 plt.figure()
 plt.bar(uk_cityname,uk_cities, width)
 plt.ylabel("Population")

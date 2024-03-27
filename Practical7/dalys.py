@@ -17,8 +17,18 @@ china_data=dalys_data.loc[dalys_CHN, ['Year', 'DALYs']]
 
 dalys_list = china_data['DALYs'].tolist()
 dalys_mean=np.mean(dalys_list)
-c=china_data.loc[china_data['Year']==2019,'Year'].iloc[0]
-print(c)
-print(dalys_mean)
+c=china_data.loc[china_data['Year']==2019,'DALYs'].values[0]
+#输出c
+#输出dalys_mean
+if dalys_mean > c:
+    print("The DALYs in China in 2019 was less than the mean.")
+elif dalys_mean < c:
+    print("The DALYs in China in 2019 was larger than the mean.")
+else:
+    print("The DALYs in China in 2019 was equal to the mean.")
 
-
+plt.plot(china_data.Year, china_data.DALYs, 'b+')
+plt.xlabel('Year')
+plt.ylabel('DALYs')
+plt.title('DALYs in China with Year')
+plt.show()

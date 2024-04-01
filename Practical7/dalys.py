@@ -34,5 +34,12 @@ plt.title('DALYs in China with Year')
 plt.xticks(china_data.Year,rotation=-90)
 plt.show()
 
-dalys_UK=dalys_data['Entity']=='United kingdom'
+dalys_UK=dalys_data['Entity']=='United Kingdom'
 UK_data=dalys_data.loc[dalys_UK, ['Year', 'DALYs']]
+plt.plot(UK_data.Year, UK_data.DALYs, 'b+')
+plt.plot(china_data.Year, china_data.DALYs, 'r+')
+plt.xlabel('Year')
+plt.ylabel('DALYs')
+plt.title('Comparation between UK and China')
+plt.xticks(UK_data.Year,rotation=-90)
+plt.show()

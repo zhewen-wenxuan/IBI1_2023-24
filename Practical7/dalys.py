@@ -5,21 +5,21 @@ import numpy as np
 os.chdir('/Users/xuanzhewen/code/IBI1_2023-24/Practical7')
 dalys_data = pd.read_csv("dalys-rate-from-all-causes.csv")
 a=dalys_data.loc[0:100:10,"DALYs"]
-#输出a
+print(a)
 
 dalys_AFG=dalys_data['Entity'] == 'Afghanistan'
 b=dalys_data.loc[dalys_AFG,'DALYs']
-#输出b
+print(b)
 
 dalys_CHN=dalys_data['Entity']=='China'
 china_data=dalys_data.loc[dalys_CHN, ['Year', 'DALYs']]
-#输出china_data
+print(china_data)
 
 dalys_list = china_data['DALYs'].tolist()
 dalys_mean=np.mean(dalys_list)
 c=china_data.loc[china_data['Year']==2019,'DALYs'].values[0]
-#输出c
-#输出dalys_mean
+print(c)
+print(dalys_mean)
 if dalys_mean > c:
     print("The DALYs in China in 2019 was less than the mean.")
 elif dalys_mean < c:

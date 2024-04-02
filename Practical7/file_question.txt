@@ -1,0 +1,10 @@
+Question:
+How has the relationship between the DALYs in China and the UK changed over time?
+Are they becoming more similar, less similar?
+
+Line:
+37-45
+
+Discuss:
+The DALYs is high at first in China. As time goes, the amount decrease and now both 
+DALYs in China and UK is low.

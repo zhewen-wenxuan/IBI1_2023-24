@@ -2,7 +2,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 N = 10000  
-Sus = 9999  
+Sus = 9990
 Inf = 10  #If use Inf=1, the picture is not obvious
 Rec = 0     
 beta = 0.3  

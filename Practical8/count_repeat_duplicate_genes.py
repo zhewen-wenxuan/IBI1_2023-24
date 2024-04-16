@@ -7,7 +7,7 @@ output_file = output_dir + output_filename
 with open(input_file, 'r') as fin:     
     lines = fin.readlines()
 with open(output_filename, 'w') as fout:      
-    gene = False             # Flag in the whole section, there only the first circulation that gene==false.
+    gene = False             # Flag,in the whole section, there only the first circulation that gene==false.
     current_gene_name = None
     current_gene_sequence = ""      
 
@@ -23,4 +23,4 @@ with open(output_filename, 'w') as fout:
         else:
             if gene:                  
                 current_gene_sequence += line.strip()        
-print(f" {output_filename} is the file you want")
+print(f" {output_filename} ")

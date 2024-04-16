@@ -3,7 +3,7 @@ import matplotlib.pyplot as plt
 
 N = 10000  
 Sus = 9999  
-Inf = 10     
+Inf = 10  #If use Inf=1, the picture is not obvious
 Rec = 0     
 beta = 0.3  
 gamma = 0.05  
@@ -34,5 +34,5 @@ plt.xlabel('time')
 plt.ylabel('population')
 plt.title('SIR Model')
 plt.legend()
-plt.savefig("SIR_model_plot.png", type="png")  # 保存图像
+plt.savefig("SIR_model_plot.png", format="png")
 plt.show()

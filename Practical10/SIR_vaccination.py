@@ -1,15 +1,19 @@
 import numpy as np
 import matplotlib.pyplot as plt
+import matplotlib
+matplotlib.use('MacOSX')
 
 N = 10000  
 Inf = 10  #If use Inf=1, the picture is not obvious
 Rec = 0    
 beta = 0.3  
 gamma = 0.05  
-vaccination_rates = [0.1, 0.2, 0.3, 0.4, 0.5,0.6]
+vaccination_rates = [0.1, 0.2, 0.3, 0.4,0.5,0.6,0.7,0.8]
 infected_over_time ={vac: [] for vac in vaccination_rates}
 time=1000
 for vac in  vaccination_rates:
+    Inf=10
+    Rec=0
     Sus=N*(1-vac)-Rec-Inf
     for i in range(time):
         prob_inf = beta * Inf / N  
@@ -24,7 +28,7 @@ for vac in  vaccination_rates:
 
 plt.figure(figsize=(8, 6), dpi=150)  
 for vac_rate, infected_time in infected_over_time.items():
-    plt.plot(time, infected_time, label=f'coverage={vac}')
+    plt.plot(range(time), infected_time, label=f'coverage={vac_rate}')
 plt.xlabel('time')
 plt.ylabel('population')
 plt.title('SIR Model')

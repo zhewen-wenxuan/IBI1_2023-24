@@ -1,10 +1,9 @@
 import blosum as bl
-import os as os
-with open('SLC6A4_HUMAN.fa','r') as human:
+with open('/Users/xuanzhewen/code/IBI1_2023-24/Practical13/SLC6A4_HUMAN.fa','r') as human:
     human.content=human.read()
-with open('SLC6A4_MOUSE.fa','r') as mouse:
+with open('/Users/xuanzhewen/code/IBI1_2023-24/Practical13/SLC6A4_MOUSE.fa','r') as mouse:
     mouse.content=mouse.read()
-with open('SLC6A4_RAT.fa','r') as rat:
+with open('/Users/xuanzhewen/code/IBI1_2023-24/Practical13/SLC6A4_RAT.fa','r') as rat:
     rat.content=rat.read()
 
 human_str=''
@@ -23,11 +22,26 @@ for line in rat.content:
 
 matrix=bl.BLOSUM(62)
 
-score_1=0, amino_1=0
-score_2=0, amino_2=0
-score_3=0, amino_3=0
+score_1=0 
+amino_1=0
+score_2=0 
+amino_2=0
+score_3=0 
+amino_3=0
 for i in range(len(rat_str)):
-    score+=matrix[]
+    score_1+=matrix[human_str[i]][mouse_str[i]]
+    if human_str[i]==mouse_str[i]:
+        amino_1+=1
+for i in range(len(rat_str)):
+    score_2+=matrix[human_str[i]][rat_str[i]]
+    if human_str[i]==rat_str[i]:
+        amino_2+=1
+for i in range(len(rat_str)):
+    score_3+=matrix[rat_str[i]][mouse_str[i]]
+    if rat_str[i]==mouse_str[i]:
+        amino_3+=1
+print(score_1,amino_1,score_2,amino_2,score_3,amino_3)
+
 
 
 

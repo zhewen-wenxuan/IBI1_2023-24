@@ -55,6 +55,9 @@ for i in range(len(rat_str)):
         amino_3+=1
 print(score_1,amino_1,score_2,amino_2,score_3,amino_3)
 
+# mouse sequence and rat sequence are most relative
+# mouse is better than rat to be a organism model   
+
 
 
 

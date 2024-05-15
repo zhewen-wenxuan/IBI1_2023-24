@@ -11,5 +11,5 @@ def DNA_mRNA_convertor(dna):
         if a[i]=="G":
             b.append("C")
     return print("".join(b))
-x=''
+x='AGCTT'
 DNA_mRNA_convertor (x)

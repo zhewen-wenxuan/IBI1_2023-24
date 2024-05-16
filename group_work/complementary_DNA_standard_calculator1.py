@@ -14,5 +14,5 @@ def Complementary_DNA(dna):
     for i in range(len(a)):
         c.append(b[len(a)-1-i])
     return print("".join(c))
-x=''
+x='AGCTT'
 Complementary_DNA(x)

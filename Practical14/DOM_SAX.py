@@ -39,7 +39,6 @@ import xml.sax
 import time
 from collections import defaultdict
 import matplotlib.pyplot as plt
-
 class GOSaxHandler(xml.sax.ContentHandler):
     def __init__(self):
         self.current_tag = ""
@@ -79,6 +78,7 @@ counts = list(Handler.namespace_count.values())
 
 plt.bar(namespaces, counts, color=['blue', 'green', 'red'])
 plt.xlabel('Ontology')
+plt.xticks(rotation=90)
 plt.ylabel('Number of Terms')
 plt.title('Number of Terms per Ontology (SAX)')
 plt.show()
@@ -87,3 +87,4 @@ plt.show()
 for namespace, count in Handler.namespace_count.items():
     print(f"{namespace}: {count}")
 
+# In my laptop, SAX is faster than DOX

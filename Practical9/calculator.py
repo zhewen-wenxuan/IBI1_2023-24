@@ -3,4 +3,6 @@ def calculator(total_money,price):
     change=total_money%price
     return number,change
 
-print(calculator(110,3))
+total_money=float(input('The money you have ',))
+price=float(input('the price of one bar ',))
+print(calculator(total_money,price))

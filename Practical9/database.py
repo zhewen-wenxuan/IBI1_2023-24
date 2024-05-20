@@ -9,3 +9,5 @@ class students:
 Jay=students('Jay','BMI',99,98,99)
 print("Jay's information:")
 print(Jay.__dict__)
+Student = students(input('name: '), input('major: '), int(input('code_score: ')), int(input('group_score: ')), int(input('exam_score: ')))
+print(Student.__dict__)

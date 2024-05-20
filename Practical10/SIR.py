@@ -2,8 +2,8 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 N = 10000  
-Sus = 9990
-Inf = 10  #If use Inf=1, the picture is not obvious
+Sus = 9999
+Inf = 1  # If use Inf=1, the picture is not obvious
 Rec = 0     
 beta = 0.3  
 gamma = 0.05  
@@ -15,13 +15,14 @@ recovered_over_time = []
 for i in range(1000):
     prob_infection = beta * Inf / N  
     prob_recovery = gamma            
-    infected_indices = np.random.choice(range(N), size=int(prob_infection * Sus), replace=False)  
-    recovered_indices = np.random.choice(range(N), size=int(prob_recovery * Inf), replace=False)  
-    Sus -= len(infected_indices)  
-    Inf += len(infected_indices) - len(recovered_indices)  
-    Rec += len(recovered_indices)  
+    
+    new_infections = np.random.binomial(Sus, prob_infection)
+    new_recoveries = np.random.binomial(Inf, prob_recovery)
+    
+    Sus -= new_infections  
+    Inf += new_infections - new_recoveries
+    Rec += new_recoveries  
 
-    # 将当前人数计数存储到相应的数组中
     susceptible_over_time.append(Sus)
     infected_over_time.append(Inf)
     recovered_over_time.append(Rec)
@@ -34,5 +35,4 @@ plt.xlabel('time')
 plt.ylabel('population')
 plt.title('SIR Model')
 plt.legend()
-plt.savefig("SIR_model_plot.png", format="png")
 plt.show()

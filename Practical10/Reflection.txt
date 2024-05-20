@@ -1,0 +1,3 @@
+This practical seems difficult and challenging. However, I learn a lot from it.
+I can solve problem with time change more fluently.
+I can also conbile math model with python.

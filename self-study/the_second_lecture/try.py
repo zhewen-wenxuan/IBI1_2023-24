@@ -1,1 +1,3 @@
-p3={'a': torch.tensor([1,2,3])}
+import torch
+x_tensor = torch.rand(5,6)
+print(x_tensor)
